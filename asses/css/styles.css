@@ -11,15 +11,15 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width: 1000px;
-    height: 600px;
+    transform: translate(-50%, -50%);
+    width: 80%; /* adjust the width to fit the screen */
+    height: 60vh; /* adjust the height to fit the content */
     background: white;
     box-shadow: 0 30px 50px #dbdbdb;
 }
 .container .slide .item{
-    width: 200px;
-    height: 300px;
+    width: 30%; /* adjust the width to fit the screen */
+    height: 40vh; /* adjust the height to fit the content */
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -29,7 +29,7 @@ body{
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
-}
+  }
 .slide .item:nth-child(1),
 .slide .item:nth-child(2){
     top: 0;
@@ -136,12 +136,35 @@ body{
 }
 @media (max-width: 768px) {
     .container {
-       width: 90%; /* adjust the width to fit the mobile screen */
-       height: auto; /* adjust the height to fit the content */
+       width: 90%;
+       height: auto;
      }
     .slide.item {
-       width: 40%; /* adjust the width to fit the mobile screen */
-       height: 200px; /* adjust the height to fit the content */
+       width: 40%;
+       height: 200px;
      }
-     /* Add more styles as needed */
+   }
+   
+   /* Tablet devices (max-width: 1024px) */
+   @media (max-width: 1024px) {
+    .container {
+       width: 80%;
+       height: 50vh;
+     }
+    .slide.item {
+       width: 25%;
+       height: 300px;
+     }
+   }
+   
+   /* Desktop devices (min-width: 1024px) */
+   @media (min-width: 1024px) {
+    .container {
+       width: 70%;
+       height: 60vh;
+     }
+    .slide.item {
+       width: 20%;
+       height: 400px;
+     }
    }
